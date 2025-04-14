@@ -1,37 +1,32 @@
 {
-    "name": "PhdResearch",
-    "build": {
-        "context": "..", // Ensures Docker looks at the project root
-        "dockerfile": "Dockerfile"
-    },
-    // Features to add to the dev container. More info: https://containers.dev/features.
-    // "features": {},
-    // Configure tool-specific properties.
-    "customizations": {
-        // Configure properties specific to VS Code.
-        "vscode": {
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "bash",
-                "terminal.integrated.profiles.linux": {
-                    "bash": {
-                        "path": "/bin/bash",
-                        "args": [
-                            "--login"
-                        ]
-                    }
-                },
-                "python.envFile": "${workspaceFolder}/.env"
-            },
-            "extensions": [
-                "streetsidesoftware.code-spell-checker",
-                "ms-azuretools.vscode-docker",
-                "ms-python.vscode-pylance",
-                "ms-python.python", // Python extension
-                "mechatroner.rainbow-csv", // CSV coloring extension
-                "ms-python.pylint", // Python linter
-                "lextudio.restructuredtext",  // Sphinx and reStructuredText extension
-                "njpwerner.autodocstring" // autoDocstring extension for docstring generation
-            ]
-        }
+  "name": "PhdResearch",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "dev",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "args": ["--login"]
+          }
+        },
+        "python.envFile": "${workspaceFolder}/.env"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-python.vscode-pylance",
+        "streetsidesoftware.code-spell-checker",
+        "mechatroner.rainbow-csv",
+        "lextudio.restructuredtext",
+        "njpwerner.autodocstring",
+        "ms-azuretools.vscode-docker"
+      ]
     }
+  }
 }
