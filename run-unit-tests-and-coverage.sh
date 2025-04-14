@@ -1,2 +1,7 @@
-#bin/bash/
-pytest --cov=src --cov-report html tests/
+#!/bin/bash
+set -e
+
+export PYTHONPATH=src
+coverage run -m pytest tests/
+coverage report
+coverage html

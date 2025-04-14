@@ -1,0 +1,5 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"src.app.Calculator" [color="black", fontcolor="black", label=<{Calculator|<br ALIGN="LEFT"/>|add(a, b)<br ALIGN="LEFT"/>multiply(a, b)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}
